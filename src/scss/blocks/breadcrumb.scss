@@ -1,10 +1,9 @@
 .breadcrumb {
-  margin-left: 4px;
-
 
   &__list {
     display: flex;
     align-items:center;
+    flex-wrap: wrap;
     column-gap: 55px;
     margin-left: 4px;
     font-weight: 500;
