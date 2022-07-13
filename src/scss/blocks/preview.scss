@@ -1,0 +1,113 @@
+.main {
+  background-color: $orangeColor;
+}
+
+.preview {
+  background: url(../img/main-page_bgi2.jpg) $orangeColor no-repeat;
+  background-position: center bottom;
+  margin-bottom: -1px;
+  @media (min-width: 1440px){
+    background-size: 100vw auto;
+    height: 100vh;
+  }
+  @media (max-width:$pc){
+    background-size: 110% auto;
+  }
+  @media (max-width:$tablet){
+    background-size: 120% auto;
+  }
+  @media (max-width:$mobile){
+    background-size: 125% auto;
+  }
+  @media (max-width:$mobileSmall){
+    background-size: 128% auto;
+  }
+  @media (max-width: 360px){
+    background: url(../img/main-page_bgi-mini.jpg) $orangeColor no-repeat;
+    background-size: 100% auto;
+    background-position: center bottom;
+  }
+
+  &__container {
+    @include adaptiveValue("height", 750, 290);
+    position: relative;
+    @media (min-width: 1440px){
+      height: 100vh;
+    }
+
+  }
+
+  &__main-img {
+    position: absolute;
+    left: 7px;
+    top: 1%;
+    z-index: 5;
+    width: 66%;
+
+    @media (max-width:$pc){
+      width: 70%;
+      top: 6%;
+    }
+    @media (max-width:$tablet){
+      width: 75%;
+      top: 3%;
+    }
+
+    @media (max-width:$mobileSmall){
+      width: 77%;
+      top: 5%;
+    }
+    @media (max-width: 360px){
+      width: 82%;
+      top: 7%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__main-prize {
+    position: absolute;
+    right: -20px;
+    top: 140px;
+    z-index: 4;
+    width: 53%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    z-index: 10;
+    transform: translateX(-50%);
+    display: block;
+    margin: 0 auto;
+    padding: 15px 60px;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    background: #e63000;
+    border-radius: 46px;
+    border: 10px solid #ededed;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      background: #bc310f;
+    }
+    @media (max-width:$mobile){
+      font-size: 14px;
+      padding: 7px 30px;
+      border: 7px solid #ededed;
+    }
+    @media (max-width: 360px){
+      font-size: 14px;
+      padding: 7px 25px;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+@use "sass:math";
+
+@import "basic/mixins";
+@import "fonts/fonts";
+@import "basic/variables";
+
+$fontFamily: "Manrope";
+$fontSize: 18px;
+$mainColor: $mainColor;
+
+$minWidth: 320;
+$maxWidth: 1920;
+$maxWidthContainer: 1650;
+$containerPadding: 30;
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+
+$pc: $containerWidth+px;
+$tablet: 991.98px;
+$mobile: 767.98px;
+$mobileSmall: 479.98px;
+
+$responsiveType: 1;
+
+@import "basic/null";
+
+body {
+  background-color: $lightColor;
+}
+
+.wrapper {
+  position: relative;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+	> main {
+		flex: 1 1 auto;
+	}
+	// Фикс для слайдеров
+	> * {
+		min-width: 0;
+	}
+}
+
+@if ($responsiveType==1) {
+	[class*="__container"] {
+		@if ($maxWidthContainer>0) {
+			max-width: $maxWidthContainer+px;
+			box-sizing: content-box;
+			margin: 0 auto;
+		}
+		@if ($containerPadding>0) {
+      padding: 0 (math.div($containerPadding, 2))+px;
+		}
+	}
+}
+
+
+@import "header";
+@import "main";
+@import "footer";
+
+@import "common";
+
+//@import "blocks/sys";
+//@import "blocks/preview";
+//@import "blocks/present";
