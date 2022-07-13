@@ -1,0 +1,41 @@
+.breadcrumb {
+  margin-left: 4px;
+
+
+  &__list {
+    display: flex;
+    align-items:center;
+    column-gap: 55px;
+    margin-left: 4px;
+    font-weight: 500;
+    font-size: 15px;
+    color: #bdbdbd;
+
+    &:not(:last-child) {
+      color: #068145;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      &::after{
+        content:'';
+        position: absolute;
+        right: -28px;
+        top: 50%;
+        transform: translate(50%, -50%);
+        width: 8px;
+        height: 14px;
+        background-image: url(../img/arrow.svg);
+      }
+    }
+
+    &:last-child{
+      color: #068145;
+    }
+  }
+}
+
+

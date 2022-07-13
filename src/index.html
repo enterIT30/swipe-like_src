@@ -7,17 +7,16 @@
     <div class="wrapper">
       @@include('html/_header.html',{})
       <main class="main">
-        <section class="sys"></section>
+        <nav aria-label="breadcrumb">
+          <div class="breadcrumb__container">
+            <ul class="breadcrumb__list">
+              <li class="breadcrumb__item"><a href="#">Главная</a></li>
+              <li class="breadcrumb__item" aria-current="page">Умная площадка</li>
+            </ul>
+          </div>
+        </nav>
       </main>
-      @@include('html/_footer.html',{})
     </div>
-<!--     <div class="popup popup-login">
-      <div class="popup__content">
-        <div class="popup__body">
-          <span class="popup__close"></span>
-        </div>
-      </div>
-    </div> -->
     @@include('html/_js.html',{})
   </body>
 </html>

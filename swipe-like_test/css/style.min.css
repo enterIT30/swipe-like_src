@@ -552,3 +552,35 @@ body {
 .menu-link:hover::after {
   width: 100%;
 }
+
+.breadcrumb {
+  margin-left: 4px;
+}
+.breadcrumb__list {
+  display: flex;
+  align-items: center;
+  column-gap: 55px;
+  margin-left: 4px;
+  font-weight: 500;
+  font-size: 15px;
+  color: #bdbdbd;
+}
+.breadcrumb__list:not(:last-child) {
+  color: #068145;
+}
+.breadcrumb__item {
+  position: relative;
+}
+.breadcrumb__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -28px;
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 8px;
+  height: 14px;
+  background-image: url(../img/arrow.svg);
+}
+.breadcrumb__item:last-child {
+  color: #068145;
+}

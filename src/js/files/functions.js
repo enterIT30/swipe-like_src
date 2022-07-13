@@ -1,11 +1,7 @@
-const header = document.querySelector('.header');
-
 const searchForm = document.querySelector('.header__form.form-header');
 const searchInput = document.querySelector('.form-header__input');
-
 const searchBtn = document.querySelector('.form-header__button');
 const windowOuterWidth = window.outerWidth;
-/* console.log(searchForm); */
 
 
 document.addEventListener('click', (e) => {
