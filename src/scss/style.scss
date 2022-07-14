@@ -28,26 +28,26 @@ body {
   background-color: $lightColor;
 }
 
-.wrapper {
-  position: relative;
-	min-height: 100%;
-	display: flex;
-	flex-direction: column;
-	overflow: auto;
-	> main {
-		flex: 1 1 auto;
-	}
-	// Фикс для слайдеров
-	> * {
-		min-width: 0;
-	}
-}
-
 @if ($responsiveType==1) {
 	.container {
-		max-width: $maxWidthContainer+px;
+		max-width: $containerWidth+px;
 		margin: 0 auto;
-    padding: 0 (math.div($containerPadding, 2))+px;
+    padding: 50px (math.div($containerPadding, 2))+px 75px;
+
+    @media (max-width: 1640px){
+      padding-top: 35px;
+      padding-bottom: 45px;
+    }
+
+    @media (max-width: 768px){
+      padding-top: 25px 0;
+      padding-bottom: 30px;
+    }
+
+    @media (max-width: 360px){
+      padding-top: 20px;
+      padding-bottom: 25px;
+    }
 	}
 }
 
@@ -59,5 +59,5 @@ body {
 @import "common";
 
 @import "blocks/breadcrumb";
-//@import "blocks/preview";
-//@import "blocks/present";
+@import "blocks/playground";
+@import "blocks/routine";

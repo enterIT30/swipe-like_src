@@ -1,11 +1,21 @@
 .breadcrumb {
+  margin-left: 4px;
+  margin-bottom: 30px;
+
+  @media (max-width: 1640px){
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 768px){
+    margin-bottom: 18px;
+  }
 
   &__list {
     display: flex;
     align-items:center;
     flex-wrap: wrap;
     column-gap: 55px;
-    margin-left: 4px;
+    row-gap: 10px;
     font-weight: 500;
     font-size: 15px;
     color: #bdbdbd;

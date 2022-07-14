@@ -7,14 +7,111 @@
     <div class="container">
       @@include('html/_header.html',{})
       <main class="main">
-        <nav aria-label="breadcrumb">
-          <div class="breadcrumb__container">
-            <ul class="breadcrumb__list">
-              <li class="breadcrumb__item"><a href="#">Главная</a></li>
-              <li class="breadcrumb__item" aria-current="page">Умная площадка</li>
-            </ul>
-          </div>
+        <nav class="breadcrumb" aria-label="breadcrumb">
+          <ul class="breadcrumb__list">
+            <li class="breadcrumb__item"><a href="#">Главная</a></li>
+            <li class="breadcrumb__item" aria-current="page">Умная площадка</li>
+          </ul>
         </nav>
+        <section class="playground">
+          <h1 class="playground__title main-title">Умная спортивная площадка по приказу №107 от 23.03.2022</h1>
+          <div class="playground__descr main-descr">
+            Уличная площадка с тренажерным комплексом из 21 тренажера. <span>Для иллюстрации упражнений лучше конечно использовать анимацию, пусть и простую. Сможем ли мы получить исходники изображений в векторе (svg)? Нам так было бы удобнее делать анимацию. Размер изображений для разных упражнений должен быть одинаковый по размеру и пропорциям. Для каждого изображений одного упражнения - оборудование должно быть неподвижно и находиться в одном месте</span> 
+          </div>
+          <a class="playground__button btn btn--orange" href="#" >Оборудование в каталоге</a>
+          <div class="playground__routine">
+            <a href="#" class="playground__card card-playground">
+              <div class="card-playground__img">
+                <img src="img/playground/warm-up.jpg" alt="Разминка">
+              </div>
+              <div class="card-playground__info info-card">
+                <div class="info-card__logo">
+                  <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.64463 19.087H12.0228L0.358398 24.2194L2.64463 19.087Z" fill="#FFC100"/>
+                    <path d="M22.0075 24.2194L12.0228 19.087L7.26367 21.1866L15.0555 24.2194H22.0075Z" fill="black"/>
+                    <path d="M11.1363 0.282333L15.0089 8.91402L0.358398 24.2178L11.1363 0.282333Z" fill="url(#paint0_linear_5_1927)"/>
+                    <path d="M15.0554 24.2209H22.0075L15.0088 8.9171L15.0554 24.2209Z" fill="url(#paint1_linear_5_1927)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_5_1927" x1="7.66809" y1="24.2201" x2="7.66809" y2="0.278275" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#01B858"/>
+                    <stop offset="1" stop-color="#068145"/>
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_5_1927" x1="18.4952" y1="24.2232" x2="18.4952" y2="8.92293" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#01B858"/>
+                    <stop offset="1" stop-color="#068145"/>
+                    </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="info-card__text">
+                  <div class="info-card__title">Разминка</div>
+                  <div class="info-card__descr">10-15 мин. | 8 упражнений</div>
+                </div>
+              </div>
+            </a>
+
+            <a href="routine-one.html" class="playground__card card-playground">
+              <div class="card-playground__img">
+                <img src="img/playground/routine-1.jpg" alt="Программа 1">
+              </div>
+              <div class="card-playground__info info-card">
+                <div class="info-card__logo">
+                  <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.64463 19.087H12.0228L0.358398 24.2194L2.64463 19.087Z" fill="#FFC100"/>
+                    <path d="M22.0075 24.2194L12.0228 19.087L7.26367 21.1866L15.0555 24.2194H22.0075Z" fill="black"/>
+                    <path d="M11.1363 0.282333L15.0089 8.91402L0.358398 24.2178L11.1363 0.282333Z" fill="url(#paint0_linear_5_1927)"/>
+                    <path d="M15.0554 24.2209H22.0075L15.0088 8.9171L15.0554 24.2209Z" fill="url(#paint1_linear_5_1927)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_5_1927" x1="7.66809" y1="24.2201" x2="7.66809" y2="0.278275" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#01B858"/>
+                    <stop offset="1" stop-color="#068145"/>
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_5_1927" x1="18.4952" y1="24.2232" x2="18.4952" y2="8.92293" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#01B858"/>
+                    <stop offset="1" stop-color="#068145"/>
+                    </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="info-card__text">
+                  <div class="info-card__title">Программа 1</div>
+                  <div class="info-card__descr">3 недели | 6 упражнений</div>
+                </div>
+
+              </div>
+            </a>
+
+            <a href="routine-two.html" class="playground__card card-playground">
+              <div class="card-playground__img">
+                <img src="img/playground/routine-2.jpg" alt="Программа 2">
+              </div>
+              <div class="card-playground__info info-card">
+                <div class="info-card__logo">
+                  <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.64463 19.087H12.0228L0.358398 24.2194L2.64463 19.087Z" fill="#FFC100"/>
+                    <path d="M22.0075 24.2194L12.0228 19.087L7.26367 21.1866L15.0555 24.2194H22.0075Z" fill="black"/>
+                    <path d="M11.1363 0.282333L15.0089 8.91402L0.358398 24.2178L11.1363 0.282333Z" fill="url(#paint0_linear_5_1927)"/>
+                    <path d="M15.0554 24.2209H22.0075L15.0088 8.9171L15.0554 24.2209Z" fill="url(#paint1_linear_5_1927)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear_5_1927" x1="7.66809" y1="24.2201" x2="7.66809" y2="0.278275" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#01B858"/>
+                    <stop offset="1" stop-color="#068145"/>
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_5_1927" x1="18.4952" y1="24.2232" x2="18.4952" y2="8.92293" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#01B858"/>
+                    <stop offset="1" stop-color="#068145"/>
+                    </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="info-card__text">
+                  <div class="info-card__title">Программа 2</div>
+                  <div class="info-card__descr">6 недель | 10 упражнений</div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
       </main>
     </div>
     @@include('html/_js.html',{})
