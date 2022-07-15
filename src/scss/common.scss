@@ -1,5 +1,6 @@
 .playground__title,
-.routine__header {
+.routine__header,
+.chinning__header {
   margin-bottom: 30px;
 
   @media (max-width: 1640px) {
@@ -16,12 +17,14 @@
 }
 
 .playground__descr,
-.routine__descr {
+.routine__descr,
+.chinning__descr {
   margin-bottom: 35px;
 }
 
 .playground__button,
-.routine__button {
+.routine__button,
+.chinning__button {
   margin-bottom: 81px;
 
   @media (max-width: 1240px){
@@ -38,6 +41,37 @@
   }
 }
 
+.section-header {
+  position: relative;
+}
+
+.title-group {
+  display: flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap: wrap;
+  margin-bottom: 23px;
+
+  h1 {
+    @media (max-width: 360px){
+      order: 2;
+      flex: 1 1 100%;
+    }
+  }
+
+  a {
+    margin-top: -28px;
+
+    @media (max-width: 768px){
+      margin-top: 0;
+    }
+
+    @media (max-width: 360px){
+      order: 1;
+      margin-bottom: 25px;
+    }
+  }
+}
 
 
 .main-title {
@@ -72,6 +106,7 @@
   }
 
   &--mobi-big {
+    line-height: 0.8;
     @media (max-width: 360px){
       font-size: 26px;
     }
@@ -91,6 +126,15 @@
   @media (max-width: 360px){
     font-size: 15px;
   }
+}
+
+.main-descr--black {
+  max-width: 100%;
+  padding-left: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: math.div(27 , 18);
+  color: $darkColor;
 }
 
 .btn {
@@ -139,5 +183,161 @@
   }
   span {
     margin-left: 5px;
+  }
+}
+
+
+.training-card {
+  display: flex;
+  flex-direction: column;
+
+  &__img {
+    flex: 1 1 300px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+
+    @media (max-width: 768px){
+      flex: 0 1 280px;
+    }
+
+    @media (max-width: 600px){
+      flex: 0 1 200px;
+    }
+
+    @media (max-width: 480px){
+      flex: 0 1 150px;
+    }
+
+    @media (max-width: 360px){
+      flex: 0 1 100px;
+    }
+
+    &.bgc-green {
+      background-color: $greenColor;
+    }
+
+    &.bgc-blue {
+      background-color: $blueColor;
+    }
+
+    &.bgc-orange {
+      background-color: $orangeColor;
+    }
+
+    &.bgc-pink {
+      background: $pincColor;
+    }
+
+    svg {
+      max-width: 65%;
+      max-height: 90%;
+
+      @media (max-width: 1240px){
+        max-width: 55%;
+        max-height: 80%;
+      }
+
+      @media (max-width: 992px){
+        max-width: 65%;
+      }
+
+      @media (max-width: 650px){
+        max-width: 80%;
+      }
+
+      @media (max-width: 480px){
+        max-width: 70%;
+      }
+
+      @media (max-width: 360px){
+        width: 100%;
+        //height: 100%;
+
+      }
+
+    }
+  }
+  /* width="247" height="176"
+  width="216" height="201"  */
+
+  &__text {
+    flex: 0 0 84px;
+    padding: 13px 40px 13px 40px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: math.div(29 , 24);
+    color: $lightColor;
+    background-color: $darkColor;
+
+    span {
+      display: block;
+      max-width: 260px;
+
+      @media (max-width: 480px){
+        max-width: 130px;
+      }
+    }
+
+    @media (max-width: 768px){
+      flex: 0 1 auto;
+    }
+
+    @media (max-width: 740px){
+      padding: 8px 10px;
+      @include adaptiveValue("font-size", 24, 12, 740, 320);
+    }
+
+    @media (max-width: 480px){
+      font-size: 12px;
+    }
+  }
+}
+
+
+.training-card--top {
+  display: none;
+
+  @media (max-width: 768px){
+    display: block;
+  }
+}
+
+.training-card--bottom {
+  align-self: stretch;
+
+  @media (max-width: 768px){
+    display: none;
+  }
+}
+
+
+.exerciser {
+  display: none;
+
+  @media (max-width: 320px){
+    display: block;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__card {
+    height: 280px;
+    width: 100%;
+    padding: 19px 22px 16px 9px;
+  }
+
+  &__img {
+    padding: 0 33px 7px 0;
+    margin-bottom: 7px;
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 18px;
+    text-align: right;
+    color: #090808;
   }
 }

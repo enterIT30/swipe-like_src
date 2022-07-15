@@ -1,0 +1,80 @@
+.chinning {
+
+  &__collection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
+    grid-auto-rows: 389px;
+    gap: 30px;
+    align-items: start;
+
+    @media (max-width: 768px){
+      grid-auto-rows: min-content;
+    }
+
+    @media (max-width: 480px){
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__exerciser {
+    margin-top: 38px;
+  }
+}
+
+
+
+.table {
+  border-collapse: collapse;
+  align-items: start;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #090808;
+
+  &__title {
+    padding: 7px 0;
+    margin-bottom: 15px;
+    height: 34px;
+    width: 100%;
+    vertical-align: middle;
+    background-color: #068145;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #F4F4F2;
+  }
+
+  &__head {
+    height: 26px;
+    vertical-align: top;
+  }
+
+  &__row {
+    height: 30px;
+
+    &:nth-child(odd) {
+      background-color: #F4F4F2;
+    }
+  }
+
+  &__column {
+
+    &:not(:last-child) {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    &--first {
+      width: 25%;
+    }
+
+    &--second {
+      width: 35%;
+    }
+
+    &--third {
+      width: 40px;
+    }
+  }
+}
