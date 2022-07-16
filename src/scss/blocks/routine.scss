@@ -16,7 +16,7 @@
 
     @media (max-width: 768px){
       grid-template-columns: repeat(2, minmax(132px, 1fr));
-      grid-auto-rows: auto;
+      @include adaptiveValue("grid-auto-rows", 355, 142, 768, 320);
     }
   }
 }

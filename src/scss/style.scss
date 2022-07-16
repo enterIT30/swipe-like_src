@@ -14,13 +14,10 @@ $maxWidthContainer: 1650;
 $containerPadding: 30;
 $containerWidth: $maxWidthContainer + $containerPadding;
 
-
 $pc: $containerWidth+px;
 $tablet: 991.98px;
 $mobile: 767.98px;
 $mobileSmall: 479.98px;
-
-$responsiveType: 1;
 
 @import "basic/null";
 
@@ -28,37 +25,29 @@ body {
   background-color: $lightColor;
 }
 
-@if ($responsiveType==1) {
-	.container {
-		max-width: $containerWidth+px;
-		margin: 0 auto;
-    padding: 50px (math.div($containerPadding, 2))+px 75px;
+.container {
+  max-width: $containerWidth+px;
+  margin: 0 auto;
+  padding: 50px (math.div($containerPadding, 2))+px 75px;
 
-    @media (max-width: 1640px){
-      padding-top: 35px;
-      padding-bottom: 45px;
-    }
+  @media (max-width: 1640px){
+    padding-top: 35px;
+    padding-bottom: 45px;
+  }
 
-    @media (max-width: 768px){
-      padding-top: 25px 0;
-      padding-bottom: 30px;
-    }
+  @media (max-width: 768px){
+    padding-top: 25px 0;
+    padding-bottom: 30px;
+  }
 
-    @media (max-width: 360px){
-      padding-top: 20px;
-      padding-bottom: 25px;
-    }
-	}
+  @media (max-width: 360px){
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
 }
 
-
 @import "header";
-@import "main";
-@import "footer";
-
 @import "common";
-
-@import "blocks/breadcrumb";
 @import "blocks/playground";
 @import "blocks/routine";
 @import "blocks/chinning";

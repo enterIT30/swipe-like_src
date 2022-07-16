@@ -1,5 +1,19 @@
 .chinning {
 
+  &__title {
+    @media (max-width: 320px){
+      display: none;
+    }
+  }
+
+  &__mobititle {
+    display: none;
+    @media (max-width: 320px){
+      display: block;
+      margin-bottom: 15px;
+    }
+  }
+
   &__collection {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
@@ -20,8 +34,6 @@
     margin-top: 38px;
   }
 }
-
-
 
 .table {
   border-collapse: collapse;
